@@ -1,4 +1,7 @@
 #!/bin/bash
-pip install -r requirements.txt
+
+# Install playwright dependencies
 playwright install
-python3 main.py
+
+# Start your bot
+python main.py
