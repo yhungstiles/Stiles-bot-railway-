@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Install playwright dependencies
-playwright install
+# Install playwright with browser dependencies
+python3 -m playwright install --with-deps
 
 # Start your bot
-python main.py
+python3 main.py
