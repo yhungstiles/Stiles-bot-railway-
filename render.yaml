@@ -4,5 +4,4 @@ services:
           env: python
               buildCommand: |
                     pip install -r requirements.txt
-                          playwright install chromium
-                              startCommand: bash start.sh
+                        startCommand: bash start.sh
