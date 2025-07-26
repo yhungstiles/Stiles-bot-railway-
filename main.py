@@ -19,7 +19,7 @@ async def send_telegram(msg):
 
 async def run_bot():
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
+        browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         context = await browser.new_context()
         page = await context.new_page()
         await page.goto(URL)
