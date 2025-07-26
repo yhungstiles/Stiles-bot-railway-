@@ -3,9 +3,6 @@ services:
       name: trading-bot
           env: python
               buildCommand: |
-                    apt-get update && \
-                          apt-get install -y wget gnupg ca-certificates && \
-                                apt-get install -y libnss3 libatk-bridge2.0-0 libxss1 libasound2 libgbm-dev libxshmfence-dev libgtk-3-0 libx11-xcb1 libxcomposite1 libxdamage1 libxrandr2 && \
-                                      pip install -r requirements.txt && \
-                                            playwright install --with-deps
-                                                startCommand: bash start.sh
+                    pip install -r requirements.txt
+                          playwright install chromium
+                              startCommand: bash start.sh
